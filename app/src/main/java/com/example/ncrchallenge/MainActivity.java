@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void openRecorder(View view){
+        Intent intent = new Intent(this, AudioRecord.class);
+        startActivity(intent);
+    }
+
     public void openCamera(View view) {
         HelperCamera.checkCameraPermissions(this);
         launchCamera();
